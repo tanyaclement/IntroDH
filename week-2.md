@@ -188,4 +188,34 @@ If we need to know the length of a list or string, the `len` function can tell u
     len(eu_countries)
     len(word)
 
+Conditional statements are a fundamental part of all programming languages. We use the `if` operator to evaluate conditionals.
+
+    number=12
+    if number==12:
+         print "The value is 12, an integer."
+
+By adding `else`, we can tell Python to do something if the conditional isn’t true.
+
+    number=10
+    if number==12:
+         print "The value is 12, an integer."
+    else: 
+         print "The value is not 12."
+
+A **for loop** is a structure that lets us iterate through lists and other data structures so we can refer to each item one at a time.
+    
+    for country in eu_countries:
+        print country + ' is great.'
+
+Finally, we can create functions to automate repetitive processes. Use the `def` declaration to start s function definition. The code below will produce the same output as the last example.
+
+```python
+def is_great(word):
+    return word + ' is great.'
+
+for country in eu_countries:
+    print is_great(country)
+```
+
+In this case we’re not saving much effort, but as we proceed you’ll find that functions will help you write simpler, more readable code.
 
