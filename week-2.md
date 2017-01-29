@@ -1,3 +1,6 @@
+Based on lessons in the PCDA course by Steve McLaughlin and Tanya Clement: 
+https://github.com/stevemclaugh/pcda
+
 #### **1.** Command Line Basics
 
 While in many cases we can use the terms “command line,” “terminal,” and “shell” interchangeably, each has a slightly different denotation. 
