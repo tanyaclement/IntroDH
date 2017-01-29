@@ -222,3 +222,59 @@ for country in eu_countries:
 
 In this case we’re not saving much effort, but as we proceed you’ll find that functions will help you write simpler, more readable code.
 
+Next, we'll use Python’s read-eval-print loop (REPL). Open a new Terminal window and enter the following line to open the Python shell.
+
+    python
+    
+Assign a sentence to the variable `sentence` — in this case the opening line from John Kennedy Toole’s  _A Confederacy of Dunces_. Type the name of the variable and hit return to view your new string.
+
+```    
+sentence="A green hunting cap squeezed the top of a fleshy balloon of a head."
+    
+sentence
+```
+
+**Output:**
+
+    A green hunting cap squeezed the top of a fleshy balloon of a head.
+
+Making lists happens more often than any other data structure, so it’s worth reviewing the details of Python’s slice notation. Let’s create a list of strings, then view a subset of the list to a new variable. Enter the variable “words2” to view the result.
+    words=['A', 'green', 'hunting', 'cap', 'squeezed']
+    words2=words[2:4]
+    words2
+
+The Python shell should print `['hunting', 'cap']`, i.e., the subset of the list “words” from index 2 to index 3. In general, `list_name[start:end]`, where “start” and “end” are integers, returns a subset of “list-name” from index `start` to `end-1`. The “end minus 1” bit may seem odd, but in practice it makes slice notation more readable. The snippet above, for instance, gives us a list containing 2 items, equal to 4-2. And if we want to excerpt the first three items in a list, the following notation will do the trick.
+
+    words[:3]
+    
+Recall that omitting an index number before or after the colon means you want to include all items on that end of the list. The following returns everything from index 2 to the end of “words”: `['hunting', 'cap', 'squeezed']`.
+
+    words[2:]
+
+If you want to excerpt the last three entries in a list without counting from the beginning, use a negative number before the colon.
+
+    words[-3:]
+
+Likewise, the following will slice off the final 3 items in our list, returning `['A', 'green']`.
+
+    words[:-3]
+
+To reverse the order of a list, add an extra colon and “-1.”
+
+    words[::-1]
+
+It’s important to note that in Python, every string is a list of characters under the hood. We can thus reverse the spelling of a sentence like so.
+
+    sentence="A green hunting cap squeezed the top of a fleshy balloon of a head."
+    sentence[::-1]
+
+If want to break our sentence into words, we can use the `split()` function to create a list of substrings with the space character as delimiter.
+
+    words=sentence.split(' ')
+    words
+
+The `join()` function reverses the process, inserting a chosen string (here, a space) between each item in a list. Note that “sentence2” below is identical to our original “sentence” string.
+
+    sentence2=' '.join(words)
+    sentence2
+    sentence
