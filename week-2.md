@@ -95,7 +95,7 @@ If we want to view our new text file, we have lots of options to choose from. By
     head note.txt
     head -n 1 note.txt
 
-![](DraggedImage-6.png)
+
 
 **tail** is similar, printing a file’s final lines instead.
 
@@ -106,13 +106,13 @@ If we want to view our new text file, we have lots of options to choose from. By
 
     less note.txt
 
-![](DraggedImage-7.png)
+
 
 **Nano** is a simple text editor that is available in most Unix-like systems.
 
     nano note.txt
 
-![](DraggedImage-8.png)
+
 
 Use the arrow keys to move your cursor around in the document. Add another line to the file and save it by pressing `ctrl+o`, followed by `return` to confirm the filename. Press `ctrl+x` to exit Nano.
 
