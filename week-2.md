@@ -46,9 +46,11 @@ Next, let’s create a new directory and brief text file on the desktop.
     mkdir test_dir
     echo "This is some text." > test.txt
     
-List out your files to see what is on your Desktop. You should see both the directory "test_dir" and the file "test.txt"
+List out your files to see what is on your Desktop. 
 
     ls
+
+You should see both the directory "test_dir" and the file "test.txt"
 
 To move our text document into our directory we can use the `mv` tool. We’ll then `cd` into the folder.
 
@@ -192,9 +194,12 @@ If we need to know the length of a list or string, the `len` function can tell u
 
 Conditional statements are a fundamental part of all programming languages. We use the `if` operator to evaluate conditionals.
 
+> **Tip:** It is significant in Python to use the tab when you see a tabbed space in the code. Below, even though the terminal give you a new line after the colon (:) you should tab once before typing the word "print" or you'll get an error. Further, you must hit 'return' twice to run the piece of code after the closing quotation marks (").
+  
     number=12
     if number==12:
          print "The value is 12, an integer."
+
 
 By adding `else`, we can tell Python to do something if the conditional isn’t true.
 
@@ -277,3 +282,101 @@ The `join()` function reverses the process, inserting a chosen string (here, a s
     sentence2=' '.join(words)
     sentence2
     sentence
+
+#### **6.** Text I/O in Python
+This week we’ll review reading and writing text files from the Python environment. Download the following file from Project Gutenberg or the mirror provided and save it to your Desktop. It’s a collection of essays by Jonathan Swift, including a line that Toole references in the title _A Confederacy of Dunces_.
+- [http://www.gutenberg.org/cache/epub/623/pg623.txt](http://www.gutenberg.org/cache/epub/623/pg623.txt)
+- [mirror](http://www.stephenmclaughlin.net/pcda/sample_data/week-2/pg623.txt)
+
+
+> **Tip:** Take a look at the file anyway you would like. You may notice that our text file from Project Gutenberg is broken into short lines, none longer than 74 characters. Many ASCII text files follow this fixed-width convention, designed to fit the 80-character width of many early PC displays. That display format, in turn, was chosen to work with data from 80-column punch cards, introduced by IBM in the 1920s.
+
+First we’ll assign the file’s pathname to the variable `filepath` and create the file stream object we’ll use to read its contents. Open the Python shell and enter the following lines.
+
+> **Tip:** In OS X you can drag a file from Finder to a Terminal window instead of entering the pathname by hand. If the path contains any spaces, these will be escaped (preceded by a backslash) in keeping with the conventions of Unix-like interfaces.
+> Python’s `os` module, however, doesn’t recognize escaped characters. In order to avoid confusion, it’s probably best to avoid using spaces in filenames.
+
+    filepath="/Users/yourname/Desktop/pg623.txt"
+    file=open(filepath)
+    
+
+Then we’ll make an empty list called `swift_lines` and iterate through our file stream using a for loop, adding each line to the list as we go.
+
+    swift_lines=[]
+    for line in file:
+         swift_lines.append(line)
+
+Finally, we’ll close our file stream and view a line from our list.
+
+    file.close()
+    swift_lines[1000]
+
+
+Each line ends with `\r\n` , a carriage return followed by a line feed character, suggesting the file was created in a Windows text editor. As Oualline and Noria discuss in this week’s readings, Unix-like systems generally use `\n` to indicate newlines, while `\r\n` is standard in Windows and DOS. To complicate matters, early Apple computers used `\r` on its own for the same purpose. 
+
+> **Tip:** While the term “newline” refers to any character or character combination used to mark the end of a line, when we say “newline character” for the rest of the course we’ll mean `\n` (formally called “line feed”) unless otherwise noted.
+
+Whether we’re adapting to quirks of history or fixing typing mistakes, we’ll often find it helpful to get rid of whitespace characters (newlines, spaces, tabs) at the beginning and end of a given string. For a string named `line`, `line.strip()` will return a copy of the string with all newlines and other whitespace characters removed from either end.
+
+    line=lines[1000]
+    line
+    line.strip()
+
+#### **7.**  Python Text I/O Continued
+
+Closing a file stream with `close()` when you’re done with it is good style, though it’s not strictly required. If you want to keep your code compliant yet crisp, the following format closes a file stream automatically.
+
+    lines=[]
+    with open(filepath) as file:
+         for line in file:
+               lines.append(line) 
+
+Or you can use this command, which does the same in one line.
+
+    lines=open(filepath).readlines()
+
+Note that calling `readlines()` creates a list of all lines in a text file, including any newline characters (in this case, `\r\n` ). We could easily use a for loop with the `strip()` function to remove newlines from each string in the list, but the following line does the same in a shorter form. Here `open()` creates a file stream and `read()` returns the file’s contents as a single string. Finally, `some_text.splitlines()` returns a list of lines in the string `some_text`, removing newline characters along the way.
+
+    lines=open(filepath).read().splitlines()
+
+If we’d like to convert our list of lines to a block of flowable text, we can use `join()` to combine all items in the list `lines`, each separated by a space. Note that we end up losing the paragraph breaks that we saw in the original file.
+
+    ' '.join(lines)
+
+#### **8.**  Accessing Text Files on the Web
+
+The Python module `urllib2`  makes grabbing text from the Web as easy as working with local files. Let’s download the first two chapters of _A Confederacy of Dunces_ in plain ASCII format.
+
+    import urllib2
+    url="http://www.stephenmclaughlin.net/pcda/sample-data/week-2/Toole_A-Confederacy-of-Dunces_Ch1-2.txt"
+    toole_lines=urllib2.urlopen(url).read().splitlines()
+
+Let’s look at the 200th line in the file.
+
+    toole_lines[199]
+
+> _Output:_
+>
+>     'Ignatius had himself broken the baseball machine by kicking it.'
+
+Someties you'll want to do some text filtering to check whether a string includes a specified substring.
+
+    if "Reilly" in "Ignatius J. Reilly":
+         print "yes"
+
+To do a case-insensitive substring search, use the `lower()` function to convert your original string to lowercase. If your search term contains any capital letters, you’ll want to convert it to lowercase as well.
+
+    if "reilly" in "Ignatius J. Reilly".lower():
+         print "yes"
+
+Try creating a simple text filter or two, printing all lines that contain a given substring.
+
+    for line in toole_lines:
+         if "orleans" in line.lower():
+              print line
+    
+    for line in toole_lines:
+         if "doughnut" in line.lower():
+              print line
+
+While you’re at it, use a for loop to identify the sentence by Jonathan Swift (in `swift_lines`) that Toole references in his title _A Confederacy of Dunces_. Try to resist the urge to use ⌘+F in TextWrangler.
