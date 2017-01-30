@@ -30,7 +30,6 @@ You can view the contents of the current directory with the `ls` command.
 
     ls
 
-![](DraggedImage-5.png)
 
 You should see a list of directories including “Library,” “Users,” “bin,” “dev” and so on. Add the `-a` option and you’ll see a longer list including the hidden files “.DS\_Store” “.Trashes.” You can find dozens of other options in the `ls` manual, which you can read using the following line. Press “q” to return to the shell.
 
