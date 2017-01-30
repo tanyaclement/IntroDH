@@ -63,7 +63,7 @@ If we’d like to convert our list of lines to a block of flowable text, we can 
 The Python module `urllib2`  makes grabbing text from the Web as easy as working with local files. Let’s download the first two chapters of _A Confederacy of Dunces_ in plain ASCII format.
 
     import urllib2
-    url="http://www.stephenmclaughlin.net/pcda/sample_data/week-2/Toole_A-Confederacy-of-Dunces_Ch1-2.txt"
+    url="http://www.stephenmclaughlin.net/pcda/sample-data/week-2/Toole_A-Confederacy-of-Dunces_Ch1-2.txt"
     toole_lines=urllib2.urlopen(url).read().splitlines()
 
 Let’s look at the 200th line in the file.
@@ -74,7 +74,7 @@ Let’s look at the 200th line in the file.
 >
 >     'Ignatius had himself broken the baseball machine by kicking it.'
 
-Since we’ll be doing a lot of text filtering this semester, you should get used to checking whether a string includes a specified substring.
+Someties you'll want to do some text filtering to check whether a string includes a specified substring.
 
     if "Reilly" in "Ignatius J. Reilly":
          print "yes"
