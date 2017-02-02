@@ -24,7 +24,7 @@ At any given moment in a shell session, the user metaphorically occupies a parti
 
     pwd
 
-The root directory, `/`, is just like any other folder in the system. Enter the following to change your working directory to root.
+The root directory, `/`, is just like any other folder in the system so you can change your working directory to root by using the change directory command `cd`  and root:
 
     cd /
 
