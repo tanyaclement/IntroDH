@@ -33,7 +33,7 @@ You can view the contents of the current directory with the `ls` command.
     ls
 
 
-You should see a list of directories including “Library,” “Users,” “bin,” “dev” and so on. Add the `-a` option and you’ll see a longer list including the hidden files “.DS\_Store” “.Trashes.” You can find dozens of other options in the `ls` manual, which you can read using the following line. Press “q” to return to the shell.
+You should see a list of directories including “Library,” “Users,” “bin,” “dev” and so on. Add the `-a` option (with a space before the `-`) and you’ll see a longer list including the hidden files “.DS\_Store” “.Trashes.” You can find dozens of other options in the `ls` manual, which you can read using the following line. Press “q” to return to the shell.
 
     man ls
 
@@ -45,6 +45,7 @@ In OS X, the file path `~/` is a shortcut to the current user’s home directory
 
 #### **3.** Command Line Basics Continued
 Next, let’s create a new directory and brief text file on the desktop. 
+
     mkdir test_dir
     echo "This is some text." > test.txt
     
