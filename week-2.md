@@ -139,7 +139,7 @@ We’ll begin by assigning some data to variables.
     y=5.0
     z="Hello"
 
-If you type `x` and hit return, you’ll notice the variable’s current value is output on the line below. Trying the same with with `x+2` will return 7.
+If you type `x` and hit return, you’ll notice the variable’s current value is output on the line below. Trying the same with `x+2` will return 7.
 
     x+2
 
@@ -199,7 +199,7 @@ If we need to know the length of a list or string, the `len` function can tell u
 
 Conditional statements are a fundamental part of all programming languages. We use the `if` operator to evaluate conditionals.
 
-> **Tip:** It is significant in Python to use the tab when you see a tabbed space in the code. Below, even though the terminal give you a new line after the colon (:) you should tab once before typing the word "print" or you'll get an error. Further, you must hit 'return' twice to run the piece of code after the closing quotation marks (").
+> **Tip:** It is significant in Python to use the tab when you see a tabbed space in the code such as in the example below. Below, you will be given a new line after the colon `:`  but you will still need to tab once before typing the `print` command or you'll get an error. Further, you must hit 'return' twice after the final line to run the piece of code.
   
     number=12
     if number==12:
@@ -207,12 +207,14 @@ Conditional statements are a fundamental part of all programming languages. We u
 
 
 By adding `else`, we can tell Python to do something if the conditional isn’t true.
-
+> **Tip:** The tabs can be kind of tricky with this one. In this example, be sure to tab once before each `print`  command. 
+```python
     number=10
     if number==12:
          print "The value is 12, an integer."
     else: 
          print "The value is not 12."
+```
 
 A **for loop** is a structure that lets us iterate through lists and other data structures so we can refer to each item one at a time.
     
