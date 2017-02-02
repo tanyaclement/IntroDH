@@ -359,9 +359,7 @@ If we’d like to convert our list of lines to a block of flowable text, we can 
 
 The Python module `urllib2`  makes grabbing text from the Web as easy as working with local files. Let’s download the first two chapters of _A Confederacy of Dunces_ in plain ASCII format.
 ```python
-import urllib2
-```    url="http://www.stephenmclaughlin.net/pcda/sample-data/week-2/Toole_A-Confederacy-of-Dunces_Ch1-2.txt"
-```python
+import urllib2  url="http://www.stephenmclaughlin.net/pcda/sample-data/week-2/Toole_A-Confederacy-of-Dunces_Ch1-2.txt"
 toole_lines=urllib2.urlopen(url).read().splitlines()
 ```
 Let’s look at the 200th line in the file.
