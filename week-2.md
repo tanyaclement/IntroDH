@@ -46,6 +46,8 @@ In OS X, the file path `~/` is a shortcut to the current user’s home directory
 #### **3.** Command Line Basics Continued
 Next, let’s create a new directory and brief text file on the desktop. 
 
+**Tip:** Press return after each line.
+
     mkdir test_dir
     echo "This is some text." > test.txt
     
@@ -88,7 +90,7 @@ Be careful with `rm`, especially in recursive mode. It deletes files permanently
 
 #### **4.** Text I/O from the Command Line
 
-Below, we create a text file in the Desktop directory using the `>` operator. We then append a second line using `>>` and view the contents of Desktop to confirm we’ve made a new file.
+Below, we create a text file in the Desktop directory using the `>` operator. We then append a second line using the `>>` operator and view the contents of Desktop to confirm we’ve made a new file.
 
 > **Tip:** If `>` is directed at an existing file, it will overwrite the original without warning. 
 
@@ -131,7 +133,7 @@ To get started using Python, simply enter `python` in the shell.
 
 We’ve just switched from the standard shell to the Python environment, which you can tell at a glance by the “\>\>\>” to the left of your cursor. We’re in what’s known as a language shell or a read-eval-print loop (REPL), in which any commands we enter will be interpreted as Python code. You can leave Python at any time by entering the `quit()` command.
 
-We’ll begin by assigning some data to variables.
+We’ll begin by assigning some data to variables. 
 
     x=5
     y=5.0
