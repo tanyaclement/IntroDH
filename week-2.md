@@ -10,6 +10,7 @@ While in many cases we can use the terms “command line,” “terminal,” and
 A **terminal**, or more accurately a terminal emulator, is an application in your local operating system that essentially just provides a window to type in. We’ll be using the built-in Mac OSX terminal emulator, called **Terminal**, which you can usually find under “Utilities” in your Applications folder (`/Applications/Utilities/Terminal.app`). If you can't find it there, use your spotlight search box in your finder window. 
 
 Open Terminal, then type the following (note the space between echo and $SHELL!) and press return.
+
     echo $SHELL
 
 A **shell** is the software layer between user input and the rote world of file system maintenance. The graphical user interface (GUI) provided by Mac OS X is itself technically considered a shell, but if someone refers to “the shell” they typically mean a command-line interpreter like [Bash](#). The command you entered above should have returned something like `/bin/bash`, which is the location of Bash’s “binary,” or machine-readable application file. 
@@ -104,8 +105,6 @@ If we want to view our new text file, we have lots of options to choose from. By
     head note.txt
     head -n 1 note.txt
 
-
-
 **tail** is similar, printing a file’s final lines instead.
 
     tail note.txt
@@ -115,13 +114,9 @@ If we want to view our new text file, we have lots of options to choose from. By
 
     less note.txt
 
-
-
 **Nano** is a simple text editor that is available in most Unix-like systems.
 
     nano note.txt
-
-
 
 Use the arrow keys to move your cursor around in the document. Add another line to the file and save it by pressing `ctrl+o`, followed by `return` to confirm the filename. Press `ctrl+x` to exit Nano.
 
@@ -134,10 +129,12 @@ To get started using Python, simply enter `python` in the shell.
 We’ve just switched from the standard shell to the Python environment, which you can tell at a glance by the “\>\>\>” to the left of your cursor. We’re in what’s known as a language shell or a read-eval-print loop (REPL), in which any commands we enter will be interpreted as Python code. You can leave Python at any time by entering the `quit()` command.
 
 We’ll begin by assigning some data to variables. 
+```python
 
     x=5
     y=5.0
     z="Hello"
+```
 
 If you type `x` and hit return, you’ll notice the variable’s current value is output on the line below. Trying the same with `x+2` will return 7.
 
@@ -200,20 +197,20 @@ If we need to know the length of a list or string, the `len` function can tell u
 Conditional statements are a fundamental part of all programming languages. We use the `if` operator to evaluate conditionals.
 
 > **Tip:** It is significant in Python to use the tab when you see a tabbed space in the code such as in the example below. Below, you will be given a new line after the colon `:`  but you will still need to tab once before typing the `print` command or you'll get an error. Further, you must hit 'return' twice after the final line to run the piece of code.
-  
-    number=12
-    if number==12:
-         print "The value is 12, an integer."
-
+```python 
+number=12
+if number==12:
+    print "The value is 12, an integer."
+```
 
 By adding `else`, we can tell Python to do something if the conditional isn’t true.
 > **Tip:** The tabs can be kind of tricky with this one. In this example, be sure to tab once before each `print`  command. 
 ```python
-    number=10
-    if number==12:
-         print "The value is 12, an integer."
-    else: 
-         print "The value is not 12."
+number=10
+if number==12:
+    print "The value is 12, an integer."
+else: 
+    print "The value is not 12."
 ```
 
 A **for loop** is a structure that lets us iterate through lists and other data structures so we can refer to each item one at a time.
