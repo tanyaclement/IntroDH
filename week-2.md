@@ -356,8 +356,9 @@ lines=open(filepath).read().splitlines()
 
 If we’d like to convert our list of lines to a block of flowable text, we can use `join()` to combine all items in the list `lines`, each separated by a space. Note that we end up losing the paragraph breaks that we saw in the original file.
 
-
+```python
 ' '.join(lines)
+```
 
 #### **8.**  Accessing Text Files on the Web
 
@@ -377,16 +378,20 @@ toole_lines[199]
 
 Someties you'll want to do some text filtering to check whether a string includes a specified substring.
 
+```python
 if "Reilly" in "Ignatius J. Reilly":
     print "yes"
-
+```
 
 To do a case-insensitive substring search, use the `lower()` function to convert your original string to lowercase. If your search term contains any capital letters, you’ll want to convert it to lowercase as well.
 
+```python
     if "reilly" in "Ignatius J. Reilly".lower():
          print "yes"
+```
 Try creating a simple text filter or two, printing all lines that contain a given substring.
 
+```python
 for line in toole_lines:
     if "orleans" in line.lower():
         print line
@@ -394,5 +399,5 @@ for line in toole_lines:
 for line in toole_lines:
     if "doughnut" in line.lower():
         print line
-        
+```        
 While you’re at it, use a for loop to identify the sentence by Jonathan Swift (in `swift_lines`) that Toole references in his title _A Confederacy of Dunces_. Try to resist the urge to use ⌘+F in TextWrangler.
