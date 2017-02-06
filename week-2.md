@@ -354,7 +354,6 @@ lines=open(filepath).read().splitlines()
 If we’d like to convert our list of lines to a block of flowable text, we can use `join()` to combine all items in the list `lines`, each separated by a space. Note that we end up losing the paragraph breaks that we saw in the original file.
 ```python
 ' '.join(lines)
-
 ```
 #### **8.**  Accessing Text Files on the Web
 
