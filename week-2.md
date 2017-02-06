@@ -352,29 +352,30 @@ lines=open(filepath).read().splitlines()
 ```
 
 If we’d like to convert our list of lines to a block of flowable text, we can use `join()` to combine all items in the list `lines`, each separated by a space. Note that we end up losing the paragraph breaks that we saw in the original file.
-```python
+
+
 ' '.join(lines)
-```
+
 #### **8.**  Accessing Text Files on the Web
 
 The Python module `urllib2`  makes grabbing text from the Web as easy as working with local files. Let’s download the first two chapters of _A Confederacy of Dunces_ in plain ASCII format.
-```python
+
 import urllib2  url="http://www.stephenmclaughlin.net/pcda/sample-data/week-2/Toole_A-Confederacy-of-Dunces_Ch1-2.txt"
 toole_lines=urllib2.urlopen(url).read().splitlines()
-```
+
 Let’s look at the 200th line in the file.
-```python
+
 toole_lines[199]
-```
+
 > _Output:_
 >
 >     'Ignatius had himself broken the baseball machine by kicking it.'
 
 Someties you'll want to do some text filtering to check whether a string includes a specified substring.
-```python
+
 if "Reilly" in "Ignatius J. Reilly":
     print "yes"
-```
+
 
 To do a case-insensitive substring search, use the `lower()` function to convert your original string to lowercase. If your search term contains any capital letters, you’ll want to convert it to lowercase as well.
 ```python
