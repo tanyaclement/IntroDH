@@ -176,6 +176,7 @@ We can also create a subset of a list using Python’s slice notation. The follo
 eu_countries[3:7]
 ```
 Leaving one side of the colon blank will include all items on that end of the list.
+
 ```python
 eu_countries[5:]
 eu_countries[:10]
@@ -185,6 +186,7 @@ We can also use negative numbers to count backwards from the end of a list. The 
 eu_countries[-1]
 ```
 Under the hood, every string in Python is actually a list of individual characters. In the example below, `word[7]` returns the letter “e,” while `word[7:20]` returns “establishment.”
+
 ```python
 word="antidisestablishmentarianism"
 word[7]
@@ -198,6 +200,7 @@ len(word)
 Conditional statements are a fundamental part of all programming languages. We use the `if` operator to evaluate conditionals.
 
 > **Tip:** It is significant in Python to use the tab when you see a tabbed space in the code such as in the example below. Below, you will be given a new line after the colon `:`  but you will still need to tab once before typing the `print` command or you'll get an error. Further, you must hit 'return' twice after the final line to run the piece of code.
+
 ```python 
 number=12
 if number==12:
@@ -329,7 +332,7 @@ Each line ends with `\r\n` , a carriage return followed by a line feed character
 
 Whether we’re adapting to quirks of history or fixing typing mistakes, we’ll often find it helpful to get rid of whitespace characters (newlines, spaces, tabs) at the beginning and end of a given string. For a string named `line`, `line.strip()` will return a copy of the string with all newlines and other whitespace characters removed from either end.
 ```python
-line=lines[1000]
+line=swift_lines[1000]
 line
 line.strip()
 ```
