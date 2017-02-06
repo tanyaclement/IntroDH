@@ -292,7 +292,7 @@ The `join()` function reverses the process, inserting a chosen string (here, a s
 sentence2=' '.join(words)
 sentence2
 sentence
-```python
+```
 
 #### **6.** Text I/O in Python
 This week we’ll review reading and writing text files from the Python environment. Download the following file from Project Gutenberg or the mirror provided and save it to your Desktop. It’s a collection of essays by Jonathan Swift, including a line that Toole references in the title _A Confederacy of Dunces_.
