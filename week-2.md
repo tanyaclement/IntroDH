@@ -300,6 +300,7 @@ sentence
 #### **6.** Text I/O in Python
 This week we’ll review reading and writing text files from the Python environment. Download the following file from Project Gutenberg or the mirror provided and save it to your Desktop. It’s a collection of essays by Jonathan Swift, including a line that Toole references in the title _A Confederacy of Dunces_.
 - [http://www.gutenberg.org/cache/epub/623/pg623.txt](http://www.gutenberg.org/cache/epub/623/pg623.txt)
+Use this clean version: 
 - [mirror](http://www.stephenmclaughlin.net/pcda/sample_data/week-2/pg623.txt)
 
 
