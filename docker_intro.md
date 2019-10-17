@@ -34,11 +34,12 @@ For more details on how Docker works, [see this overview](https://docs.docker.co
 ```docker pull hipstas/dv```
 3. When the download is complete, enter the following command to run the container. This will create a new directory called sharedfolder on your desktop.
 
-```docker run --name dv -ti -p 8000:8000 -v ~/Desktop/sharedfolder/:/sharedfolder/ hipstas/dv```
+```docker run --name dv -ti -p 8000:8000 -v ~/Desktop/sharedfolder/:/sharedfolder/ hipstas/dv bash```
 
 The command above includes several options:
 * The `--name` flag sets the name of our container as `spokenweb`. 
 * `-ti` tells Docker that we want to use an interactive terminal.
-* `-p` maps port 8887 in our container to port 8887 in our local OS.
+* `-p` maps port 8000 in our container to port 8000 in our local OS.
 * The `-v` option defines a "shared volume" between the container and our local machine, a directory called sharedfolder.
 * `hipstas/dv` identifies the image we want to download, which is hosted on the Docker Hub website.
+* `bash` starts a bash is a Unix shell, or command language interpreter, for the GNU operating system.
