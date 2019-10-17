@@ -22,7 +22,7 @@ Enter the following commands in the terminal to kill an existing SpokenWeb conta
 
 ```
 docker rm -f dv
-docker run --name dv -ti -p 8889:8889 --volume ~/Desktop/sharedfolder/:/sharedfolder/ hipstas/dv bash
+docker run --name dv -ti -p 8000:8000 --volume ~/Desktop/sharedfolder/:/sharedfolder/ hipstas/dv bash
 ``` 
 ### Docker in more detail
 All operating systems are different but we want everyone to use the same kind so we will use Docker. Docker is an application that makes it possible to run a virtual copy of the Linux operating system within your primary OS. We will be using Ubuntu, a version of Linux that is often used to run web servers. Ordinarily, you would launch an Ubuntu server and then install the programs you need, one by one; Docker lets us speed up that process by defining our system's initial configuration in a plain text file, known as a Dockerfile. You can view the Dockerfile we are currently using here.
@@ -34,7 +34,7 @@ For more details on how Docker works, [see this overview](https://docs.docker.co
 ```docker pull hipstas/dv```
 3. When the download is complete, enter the following command to run the container. This will create a new directory called sharedfolder on your desktop.
 
-```docker run --name dv -ti -p 8887:8887 -v ~/Desktop/sharedfolder/:/sharedfolder/ hipstas/dv```
+```docker run --name dv -ti -p 8000:8000 -v ~/Desktop/sharedfolder/:/sharedfolder/ hipstas/dv```
 
 The command above includes several options:
 * The `--name` flag sets the name of our container as `spokenweb`. 
