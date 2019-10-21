@@ -17,7 +17,7 @@ A **shell** is the software layer between user input and the rote world of file 
 
 #### **2.** Exploring the File System
 
-Create a new terminal window by pressing ⌘+N. Before we go further, you may find it helpful to pull up the following cheat sheet: https://files.fosswire.com/2007/08/fwunixref.pdf (#).
+Before we go further, you may find it helpful to pull up the following cheat sheet: https://files.fosswire.com/2007/08/fwunixref.pdf (#).
 
 Unix-like operating systems are based on a metaphor: a nested set of directories and data files, forming a tree structure that begins at the root directory `/`. A benefit of this arrangement is that each file can be uniquely identified using a pathname of the following format:`/Users/yourname/Desktop/file.txt`.
 
