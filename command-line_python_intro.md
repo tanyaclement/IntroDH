@@ -38,14 +38,14 @@ In OS X, the file path `/` is a shortcut for going into a directory.
     cd /sharedfolder
 
 #### **3.** Command Line Basics Continued
-Next, let’s create a new directory and brief text file on the desktop. 
+Next, let’s create a new directory and brief text file. 
 
 **Tip:** Press return after each line.
 
     mkdir test_dir
     echo "This is some text." > test.txt
     
-List out your files to see what is on your Desktop. 
+List out your files to see what you made. 
 
     ls
 
