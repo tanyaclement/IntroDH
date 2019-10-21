@@ -1,6 +1,3 @@
-Based on lessons in the PCDA course by Steve McLaughlin and Tanya Clement: 
-https://github.com/stevemclaugh/pcda
-
 #### **1.** Command Line Basics
 
 While in many cases we can use the terms “command line,” “terminal,” and “shell” interchangeably, each has a slightly different denotation. 
@@ -257,7 +254,7 @@ sentence
 ```
 
 
-#### **6.** Text I/O in Python
+#### **4.** Text I/O in Python
 This week we’ll review reading and writing text files from the Python environment. Download the following file from Project Gutenberg or the mirror provided and save it to your Desktop. It’s a collection of essays by Jonathan Swift, including a line that Toole references in the title _A Confederacy of Dunces_.
 - [http://www.gutenberg.org/cache/epub/623/pg623.txt](http://www.gutenberg.org/cache/epub/623/pg623.txt)
 Use this clean version: 
@@ -297,7 +294,7 @@ line=swift_lines[1000]
 line
 line.strip()
 ```
-#### **7.**  Python Text I/O Continued
+#### **5.**  Python Text I/O Continued
 
 Closing a file stream with `close()` when you’re done with it is good style, though it’s not strictly required. If you want to keep your code compliant yet crisp, the following format closes a file stream automatically.
 ```python
@@ -321,7 +318,7 @@ If we’d like to convert our list of lines to a block of flowable text, we can 
 ' '.join(lines)
 ```
 
-#### **8.**  Accessing Text Files on the Web
+#### **6.**  Accessing Text Files on the Web
 
 The Python module `urllib2`  makes grabbing text from the Web as easy as working with local files. Let’s download the first two chapters of _A Confederacy of Dunces_ in plain ASCII format.
 ```python
