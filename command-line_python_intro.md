@@ -82,42 +82,10 @@ Finally, we’ll delete our test directory and the file inside. Adding the `-r` 
 Be careful with `rm`, especially in recursive mode. It deletes files permanently rather than sending them to a Trash folder, so a small mistake can really ruin your day.
 
 
-#### **4.** Text I/O from the Command Line
-
-Below, we create a text file in the Desktop directory using the `>` operator. We then append a second line using the `>>` operator and view the contents of Desktop to confirm we’ve made a new file.
-
-> **Tip:** If `>` is directed at an existing file, it will overwrite the original without warning. 
-
-    cd ~/Desktop
-    echo "Hello there." > note.txt
-    echo "Hello again." >> note.txt
-    ls
-
-If we want to view our new text file, we have lots of options to choose from. By default, **head** will read the first 10 lines of a text file and print them in the shell. You can specify any number of lines with the `-n` option. 
-
-    head note.txt
-    head -n 1 note.txt
-
-**tail** is similar, printing a file’s final lines instead.
-
-    tail note.txt
-    tail -n 1 note.txt
-
-**less** is a program that lets us scroll through longer files. To close less when you’re finished, press the `q` key.
-
-    less note.txt
-
-**Nano** is a simple text editor that is available in most Unix-like systems.
-
-    nano note.txt
-
-Use the arrow keys to move your cursor around in the document. Add another line to the file and save it by pressing `ctrl+o`, followed by `return` to confirm the filename. Press `ctrl+x` to exit Nano.
-
-
-#### **5.** Programming basics in Python
+#### **4.** Programming basics in Python
 To get started using Python, simply enter `python` in the shell.
 
-    python
+    python3
 
 We’ve just switched from the standard shell to the Python environment, which you can tell at a glance by the “\>\>\>” to the left of your cursor. We’re in what’s known as a language shell or a read-eval-print loop (REPL), in which any commands we enter will be interpreted as Python code. You can leave Python at any time by entering the `quit()` command.
 
@@ -197,7 +165,7 @@ Conditional statements are a fundamental part of all programming languages. We u
 ```python 
 number=12
 if number==12:
-    print "The value is 12, an integer."
+    print ("The value is 12, an integer.")
 ```
 
 By adding `else`, we can tell Python to do something if the conditional isn’t true.
@@ -205,15 +173,15 @@ By adding `else`, we can tell Python to do something if the conditional isn’t 
 ```python
 number=10
 if number==12:
-    print "The value is 12, an integer."
+    print("The value is 12, an integer.")
 else: 
-    print "The value is not 12."
+    print("The value is not 12.")
 ```
 
 A **for loop** is a structure that lets us iterate through lists and other data structures so we can refer to each item one at a time.
 ```python   
 for country in eu_countries:
-    print country + ' is great.'
+    print(country + ' is great.')
 ```
 Finally, we can create functions to automate repetitive processes. Use the `def` declaration to start s function definition. The code below will produce the same output as the last example.
 
@@ -222,15 +190,13 @@ def is_great(word):
     return word + ' is great.'
 
 for country in eu_countries:
-    print is_great(country)
+    print(is_great(country))
 ```
 
 In this case we’re not saving much effort, but as we proceed you’ll find that functions will help you write simpler, more readable code.
 
-Next, we'll use Python’s read-eval-print loop (REPL). Open a new Terminal window and enter the following line to open the Python shell.
+Next, we'll use Python’s read-eval-print loop (REPL). 
 
-    python
-    
 Assign a sentence to the variable `sentence` — in this case the opening line from John Kennedy Toole’s  _A Confederacy of Dunces_. Type the name of the variable and hit return to view your new string.
 
 ```python 
@@ -289,6 +255,7 @@ sentence2=' '.join(words)
 sentence2
 sentence
 ```
+
 
 #### **6.** Text I/O in Python
 This week we’ll review reading and writing text files from the Python environment. Download the following file from Project Gutenberg or the mirror provided and save it to your Desktop. It’s a collection of essays by Jonathan Swift, including a line that Toole references in the title _A Confederacy of Dunces_.
@@ -374,14 +341,14 @@ Someties you'll want to do some text filtering to check whether a string include
 
 ```python
 if "Reilly" in "Ignatius J. Reilly":
-    print "yes"
+    print("yes")
 ```
 
 To do a case-insensitive substring search, use the `lower()` function to convert your original string to lowercase. If your search term contains any capital letters, you’ll want to convert it to lowercase as well.
 
 ```python
     if "reilly" in "Ignatius J. Reilly".lower():
-         print "yes"
+         print("yes")
 ```
 Try creating a simple text filter or two, printing all lines that contain a given substring.
 
