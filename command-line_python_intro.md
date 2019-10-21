@@ -33,11 +33,9 @@ You can view the contents of the current directory with the `ls` command.
 
     ls
 
-In OS X, the file path `~/` is a shortcut to the current user’s home directory, which contains the “Documents” and “Downloads” folders users see foregrounded in the Finder. From the perspective of the command line, “Desktop” is a directory like any other. Let’s `cd` there.
+In OS X, the file path `/` is a shortcut for going into a directory.
 
-    cd ~/sharedfolder
-
-> **Tip:** Hold down the Option key and click within the current line to move the cursor.
+    cd /sharedfolder
 
 #### **3.** Command Line Basics Continued
 Next, let’s create a new directory and brief text file on the desktop. 
