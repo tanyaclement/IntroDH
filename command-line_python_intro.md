@@ -129,7 +129,7 @@ If you try to access an out-of-range index value you’ll get an error.
 ```python
 eu_countries[99]
 ```
-We can also create a subset of a list using Python’s slice notation. The following will return a list containing four items, beginning at index 3 in `eu_countries`.
+We can also create a subset of a list using Python’s slice notation. The following will return a list in a range containing four items, beginning at index 3 in `eu_countries`.
 ```python
 eu_countries[3:7]
 ```
